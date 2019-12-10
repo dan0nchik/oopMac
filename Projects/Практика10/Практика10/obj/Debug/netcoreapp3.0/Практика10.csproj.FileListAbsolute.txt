@@ -1,0 +1,11 @@
+/Users/danielkhromov/Projects/Практика10/Практика10/bin/Debug/netcoreapp3.0/Практика10
+/Users/danielkhromov/Projects/Практика10/Практика10/bin/Debug/netcoreapp3.0/Практика10.deps.json
+/Users/danielkhromov/Projects/Практика10/Практика10/bin/Debug/netcoreapp3.0/Практика10.runtimeconfig.json
+/Users/danielkhromov/Projects/Практика10/Практика10/bin/Debug/netcoreapp3.0/Практика10.runtimeconfig.dev.json
+/Users/danielkhromov/Projects/Практика10/Практика10/bin/Debug/netcoreapp3.0/Практика10.dll
+/Users/danielkhromov/Projects/Практика10/Практика10/bin/Debug/netcoreapp3.0/Практика10.pdb
+/Users/danielkhromov/Projects/Практика10/Практика10/obj/Debug/netcoreapp3.0/Практика10.csprojAssemblyReference.cache
+/Users/danielkhromov/Projects/Практика10/Практика10/obj/Debug/netcoreapp3.0/Практика10.AssemblyInfoInputs.cache
+/Users/danielkhromov/Projects/Практика10/Практика10/obj/Debug/netcoreapp3.0/Практика10.AssemblyInfo.cs
+/Users/danielkhromov/Projects/Практика10/Практика10/obj/Debug/netcoreapp3.0/Практика10.dll
+/Users/danielkhromov/Projects/Практика10/Практика10/obj/Debug/netcoreapp3.0/Практика10.pdb
