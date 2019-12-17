@@ -1,11 +1,10 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 namespace Практика9
 {
     class Program
     {
-        //162330 iter
-        //205553 recursion
+        
         static int FibonacciRecursion(ref int a, ref int b, ref int c)
         {        
             c = a + b;

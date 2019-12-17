@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/danielkhromov/Projects/Практика9/Практика9/Практика9.csproj",
+      "projectUniqueName": "/Users/danielkhromov/oopMac/Projects/Практика9/Практика9/Практика9.csproj",
       "projectName": "Практика9",
-      "projectPath": "/Users/danielkhromov/Projects/Практика9/Практика9/Практика9.csproj",
+      "projectPath": "/Users/danielkhromov/oopMac/Projects/Практика9/Практика9/Практика9.csproj",
       "packagesPath": "/Users/danielkhromov/.nuget/packages/",
-      "outputPath": "/Users/danielkhromov/Projects/Практика9/Практика9/obj/",
+      "outputPath": "/Users/danielkhromov/oopMac/Projects/Практика9/Практика9/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

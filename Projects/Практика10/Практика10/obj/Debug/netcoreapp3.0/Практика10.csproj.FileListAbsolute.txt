@@ -9,3 +9,14 @@
 /Users/danielkhromov/Projects/Практика10/Практика10/obj/Debug/netcoreapp3.0/Практика10.AssemblyInfo.cs
 /Users/danielkhromov/Projects/Практика10/Практика10/obj/Debug/netcoreapp3.0/Практика10.dll
 /Users/danielkhromov/Projects/Практика10/Практика10/obj/Debug/netcoreapp3.0/Практика10.pdb
+/Users/danielkhromov/oopMac/Projects/Практика10/Практика10/bin/Debug/netcoreapp3.0/Практика10
+/Users/danielkhromov/oopMac/Projects/Практика10/Практика10/bin/Debug/netcoreapp3.0/Практика10.deps.json
+/Users/danielkhromov/oopMac/Projects/Практика10/Практика10/bin/Debug/netcoreapp3.0/Практика10.runtimeconfig.json
+/Users/danielkhromov/oopMac/Projects/Практика10/Практика10/bin/Debug/netcoreapp3.0/Практика10.runtimeconfig.dev.json
+/Users/danielkhromov/oopMac/Projects/Практика10/Практика10/bin/Debug/netcoreapp3.0/Практика10.dll
+/Users/danielkhromov/oopMac/Projects/Практика10/Практика10/bin/Debug/netcoreapp3.0/Практика10.pdb
+/Users/danielkhromov/oopMac/Projects/Практика10/Практика10/obj/Debug/netcoreapp3.0/Практика10.csprojAssemblyReference.cache
+/Users/danielkhromov/oopMac/Projects/Практика10/Практика10/obj/Debug/netcoreapp3.0/Практика10.AssemblyInfoInputs.cache
+/Users/danielkhromov/oopMac/Projects/Практика10/Практика10/obj/Debug/netcoreapp3.0/Практика10.AssemblyInfo.cs
+/Users/danielkhromov/oopMac/Projects/Практика10/Практика10/obj/Debug/netcoreapp3.0/Практика10.dll
+/Users/danielkhromov/oopMac/Projects/Практика10/Практика10/obj/Debug/netcoreapp3.0/Практика10.pdb

@@ -1,0 +1,11 @@
+/Users/danielkhromov/oopMac/Projects/Практика9/Практика9/bin/Debug/netcoreapp3.0/Практика9
+/Users/danielkhromov/oopMac/Projects/Практика9/Практика9/bin/Debug/netcoreapp3.0/Практика9.deps.json
+/Users/danielkhromov/oopMac/Projects/Практика9/Практика9/bin/Debug/netcoreapp3.0/Практика9.runtimeconfig.json
+/Users/danielkhromov/oopMac/Projects/Практика9/Практика9/bin/Debug/netcoreapp3.0/Практика9.runtimeconfig.dev.json
+/Users/danielkhromov/oopMac/Projects/Практика9/Практика9/bin/Debug/netcoreapp3.0/Практика9.dll
+/Users/danielkhromov/oopMac/Projects/Практика9/Практика9/bin/Debug/netcoreapp3.0/Практика9.pdb
+/Users/danielkhromov/oopMac/Projects/Практика9/Практика9/obj/Debug/netcoreapp3.0/Практика9.csprojAssemblyReference.cache
+/Users/danielkhromov/oopMac/Projects/Практика9/Практика9/obj/Debug/netcoreapp3.0/Практика9.AssemblyInfoInputs.cache
+/Users/danielkhromov/oopMac/Projects/Практика9/Практика9/obj/Debug/netcoreapp3.0/Практика9.AssemblyInfo.cs
+/Users/danielkhromov/oopMac/Projects/Практика9/Практика9/obj/Debug/netcoreapp3.0/Практика9.dll
+/Users/danielkhromov/oopMac/Projects/Практика9/Практика9/obj/Debug/netcoreapp3.0/Практика9.pdb
