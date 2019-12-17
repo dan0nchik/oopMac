@@ -1,0 +1,11 @@
+/Users/danielkhromov/oopMac/Фоновая4вар/bin/Debug/netcoreapp3.0/Фоновая4вар
+/Users/danielkhromov/oopMac/Фоновая4вар/bin/Debug/netcoreapp3.0/Фоновая4вар.deps.json
+/Users/danielkhromov/oopMac/Фоновая4вар/bin/Debug/netcoreapp3.0/Фоновая4вар.runtimeconfig.json
+/Users/danielkhromov/oopMac/Фоновая4вар/bin/Debug/netcoreapp3.0/Фоновая4вар.runtimeconfig.dev.json
+/Users/danielkhromov/oopMac/Фоновая4вар/bin/Debug/netcoreapp3.0/Фоновая4вар.dll
+/Users/danielkhromov/oopMac/Фоновая4вар/bin/Debug/netcoreapp3.0/Фоновая4вар.pdb
+/Users/danielkhromov/oopMac/Фоновая4вар/obj/Debug/netcoreapp3.0/Фоновая4вар.csprojAssemblyReference.cache
+/Users/danielkhromov/oopMac/Фоновая4вар/obj/Debug/netcoreapp3.0/Фоновая4вар.AssemblyInfoInputs.cache
+/Users/danielkhromov/oopMac/Фоновая4вар/obj/Debug/netcoreapp3.0/Фоновая4вар.AssemblyInfo.cs
+/Users/danielkhromov/oopMac/Фоновая4вар/obj/Debug/netcoreapp3.0/Фоновая4вар.dll
+/Users/danielkhromov/oopMac/Фоновая4вар/obj/Debug/netcoreapp3.0/Фоновая4вар.pdb
