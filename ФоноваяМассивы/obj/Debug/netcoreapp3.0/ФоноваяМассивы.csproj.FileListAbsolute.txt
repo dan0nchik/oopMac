@@ -1,0 +1,11 @@
+/Users/danielkhromov/oopMac/ФоноваяМассивы/bin/Debug/netcoreapp3.0/ФоноваяМассивы
+/Users/danielkhromov/oopMac/ФоноваяМассивы/bin/Debug/netcoreapp3.0/ФоноваяМассивы.deps.json
+/Users/danielkhromov/oopMac/ФоноваяМассивы/bin/Debug/netcoreapp3.0/ФоноваяМассивы.runtimeconfig.json
+/Users/danielkhromov/oopMac/ФоноваяМассивы/bin/Debug/netcoreapp3.0/ФоноваяМассивы.runtimeconfig.dev.json
+/Users/danielkhromov/oopMac/ФоноваяМассивы/bin/Debug/netcoreapp3.0/ФоноваяМассивы.dll
+/Users/danielkhromov/oopMac/ФоноваяМассивы/bin/Debug/netcoreapp3.0/ФоноваяМассивы.pdb
+/Users/danielkhromov/oopMac/ФоноваяМассивы/obj/Debug/netcoreapp3.0/ФоноваяМассивы.csprojAssemblyReference.cache
+/Users/danielkhromov/oopMac/ФоноваяМассивы/obj/Debug/netcoreapp3.0/ФоноваяМассивы.AssemblyInfoInputs.cache
+/Users/danielkhromov/oopMac/ФоноваяМассивы/obj/Debug/netcoreapp3.0/ФоноваяМассивы.AssemblyInfo.cs
+/Users/danielkhromov/oopMac/ФоноваяМассивы/obj/Debug/netcoreapp3.0/ФоноваяМассивы.dll
+/Users/danielkhromov/oopMac/ФоноваяМассивы/obj/Debug/netcoreapp3.0/ФоноваяМассивы.pdb

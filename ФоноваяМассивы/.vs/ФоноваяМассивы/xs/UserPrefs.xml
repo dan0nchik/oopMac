@@ -1,11 +1,23 @@
 ﻿<Properties StartupConfiguration="{60370C55-FAE8-4334-B6F6-A739C8596316}|Default">
-  <MonoDevelop.Ide.ItemProperties.ФоноваяМассивы FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.ФоноваяМассивы PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="19" Column="72" />
+      <File FileName="Program.cs" Line="79" Column="34" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ФоноваяМассивы" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../Program.cs" line="82" offsetX="-1" offsetY="-1" expression="array2" liveUpdate="False" />
+    <Watch file="../../../Program.cs" line="82" offsetX="-1" offsetY="-1" expression="array2" liveUpdate="False" />
+    <Watch file="../../../Program.cs" line="82" offsetX="-1" offsetY="-1" expression="j" liveUpdate="False" />
+    <Watch file="../../../Program.cs" line="82" offsetX="-1" offsetY="-1" expression="j" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
