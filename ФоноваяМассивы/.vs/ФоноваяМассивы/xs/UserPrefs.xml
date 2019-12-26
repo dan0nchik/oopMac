@@ -2,12 +2,16 @@
   <MonoDevelop.Ide.ItemProperties.ФоноваяМассивы PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="79" Column="34" />
+      <File FileName="Program.cs" Line="148" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ФоноваяМассивы" expanded="True" selected="True" />
+          <Node name="ФоноваяМассивы" expanded="True">
+            <Node name="ФоноваяМассивы" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
