@@ -1,0 +1,11 @@
+/Users/danielkhromov/oopMac/Шарики/obj/Debug/netcoreapp3.0/Шарики.csprojAssemblyReference.cache
+/Users/danielkhromov/oopMac/Шарики/obj/Debug/netcoreapp3.0/Шарики.AssemblyInfoInputs.cache
+/Users/danielkhromov/oopMac/Шарики/obj/Debug/netcoreapp3.0/Шарики.AssemblyInfo.cs
+/Users/danielkhromov/oopMac/Шарики/bin/Debug/netcoreapp3.0/Шарики
+/Users/danielkhromov/oopMac/Шарики/bin/Debug/netcoreapp3.0/Шарики.deps.json
+/Users/danielkhromov/oopMac/Шарики/bin/Debug/netcoreapp3.0/Шарики.runtimeconfig.json
+/Users/danielkhromov/oopMac/Шарики/bin/Debug/netcoreapp3.0/Шарики.runtimeconfig.dev.json
+/Users/danielkhromov/oopMac/Шарики/bin/Debug/netcoreapp3.0/Шарики.dll
+/Users/danielkhromov/oopMac/Шарики/bin/Debug/netcoreapp3.0/Шарики.pdb
+/Users/danielkhromov/oopMac/Шарики/obj/Debug/netcoreapp3.0/Шарики.dll
+/Users/danielkhromov/oopMac/Шарики/obj/Debug/netcoreapp3.0/Шарики.pdb

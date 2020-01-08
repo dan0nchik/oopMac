@@ -3,7 +3,6 @@
 namespace ФоноваяМассивы
 {
     class Program
-
     {
         static int IndexOfFirstMax(int[] array) 
         {
@@ -113,11 +112,19 @@ namespace ФоноваяМассивы
         }
         static int[] Delete(int[] array)
         {
-            int[] newArray = new int[array.Length];
+            int k = 0;
             ChangeRepeated(array);
+            foreach (int i in array)
+                if (i != -1) k++;
+            int[] newArray = new int[k];
+            k = 0;
             for(int i = 0; i < array.Length; i++)
             {
-                if (array[i] != -1) newArray[i] = array[i];
+                if (array[i] != -1)
+                {
+                    newArray[k] = array[i];
+                    k++;
+                }
             }
             return newArray;
         }
@@ -127,10 +134,12 @@ namespace ФоноваяМассивы
             int N = int.Parse(Console.ReadLine());
             Console.WriteLine("Введите 1 массив:");
             int[] array = Cin(N);
+
             Console.WriteLine("Введите число для 2 массива:");
             int N2 = int.Parse(Console.ReadLine());
             Console.WriteLine("Введите 2 массив:");
             int[] array2 = Cin(N2);
+
             Console.WriteLine("Введите число для сдвига 1го массива:");
             int k = int.Parse(Console.ReadLine());
             Console.Write("Массив 1: ");
