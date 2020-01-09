@@ -3,19 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//9679
-/*if(mx[j] == x && my[k] == y && j == k)
-                    {
-                        do
-                        {
-                            x = R.Next(0, 10);
-                            y = R.Next(0, 10);
-                        } while (mx[j] == x && my[k] == y && j == k);
-                    }*/
+
 namespace Lines
 {
     class Program
     {
+        
         static bool GameOver(ref string [,] field , ref int points)
         {
             int i = 0;
@@ -35,37 +28,7 @@ namespace Lines
             
         }
 
-        //static (int[] ax, int[] ay) Zip(ref int n, ref int flag, int[] ax, int[] ay)
-        //{
-
-        //    if (flag == 1)
-        //        n *= 2;
-
-        //    Random R = new Random();
-        //    int x = R.Next(0, 10);
-        //    int y = R.Next(0, 10);
-        //    ax[0] = x;
-        //    ay[0] = y;
-        //    for (int i = 1; i < n; i++)
-        //    { //условие на наличие шара на поле на этом месте
-        //        x = R.Next(0, 10);
-        //        y = R.Next(0, 10);
-        //        for (int j = 0, k = 0; j < i && k < i; j++, k++)
-        //        {
-        //            while (ax[j] == x && ay[k] == y && j == k)
-        //            {
-        //                x = R.Next(0, 10);
-        //                y = R.Next(0, 10);
-        //            }
-        //        }
-        //        ax[i] = x;
-        //        ay[i] = y;
-        //    }
-
-        //    return (ax, ay);
-        //}
-
-
+        
         static (string[,], ConsoleColor[,]) Filling(ref string[,] field, ref int n, ref ConsoleColor[,] color)
         {
             //var (ax, ay) = Zip(ref n, ref flag, mx, my);
@@ -161,6 +124,18 @@ namespace Lines
                         colors[i + 1, j] = ConsoleColor.Black;
                         colors[i + 2, j] = ConsoleColor.Black;
                     }
+                    if (Field[i, j] == char.ConvertFromUtf32(9679) && Field[i, j] == Field[i + 1, j + 1] && Field[i, j] == Field[i + 2, j + 2] && colors[i, j] == colors[i + 1, j + 1] && colors[i, j] == colors[i + 2, j + 2])
+                    {
+                        points += 10;
+                        Field[i, j] = "";
+                        Field[i + 1, j + 1] = "";
+                        Field[i + 2, j + 2] = "";
+
+                        colors[i, j] = ConsoleColor.Black;
+                        colors[i + 1, j + 1] = ConsoleColor.Black;
+                        colors[i + 2, j + 2] = ConsoleColor.Black;
+                    }
+
                 }
             }
             return (points, Field, colors);
@@ -180,7 +155,7 @@ namespace Lines
             Filling(ref Field, ref startBalls, ref colorArray);
 
             Cout(ref Field, ref colorArray);
-
+            Console.ResetColor();
            
             while (GameOver(ref Field, ref points) == true)
             {
@@ -191,15 +166,18 @@ namespace Lines
                     Console.Write("Введите место (X;Y):");
                     x1 = int.Parse(Console.ReadLine());
                     y1 = int.Parse(Console.ReadLine());
+
                     while(Field[y,x] != char.ConvertFromUtf32(9679))
                 {
-                    Console.Write("Координаты шара введены неверно! Повторите ввод (X;Y): ");
+                    
+                    Console.Write("\r Координаты шара введены неверно! Повторите ввод (X;Y): ");
                     x = int.Parse(Console.ReadLine());
                     y = int.Parse(Console.ReadLine());
                 }
                 while (Field[y1, x1] == char.ConvertFromUtf32(9679))
                 {
-                    Console.Write("Координаты места введены неверно! Повторите ввод (X;Y):");
+                    
+                    Console.Write("\r Координаты места введены неверно! Повторите ввод (X;Y):");
                     x1 = int.Parse(Console.ReadLine());
                     y1 = int.Parse(Console.ReadLine());
                 }
@@ -207,7 +185,12 @@ namespace Lines
                     Console.WriteLine("Очки: {0}", points);
                     Move(ref Field, x, y, ref colorArray, x1, y1);
                     Line(ref Field, ref colorArray, ref points);
-                    Filling(ref Field, ref startBalls, ref colorArray);
+                    Console.Clear();
+                Console.WriteLine("Очки: {0}", points);
+                Cout(ref Field, ref colorArray);
+                    Console.Clear();
+                Console.WriteLine("Очки: {0}", points);
+                Filling(ref Field, ref startBalls, ref colorArray);
                     Cout(ref Field, ref colorArray);
             }
             Console.ReadKey();
