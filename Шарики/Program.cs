@@ -31,14 +31,7 @@ namespace Lines
         
         static (string[,], ConsoleColor[,]) Filling(ref string[,] field, ref int n, ref ConsoleColor[,] color)
         {
-            //var (ax, ay) = Zip(ref n, ref flag, mx, my);
-            //int[] x = ax;
-            //int[] y = ay;
-            //for (int i = 0; i < n; i++)
-            //{
-            //    field[y[i], x[i]] = Char.ConvertFromUtf32(9679);
-            //    color[y[i], x[i]] = CircleColor();
-            //}
+            
             Random rand = new Random();
             int x = rand.Next(0, 10);
             int y = rand.Next(0, 10);
@@ -54,12 +47,117 @@ namespace Lines
             }
             return (field, color);
         }
-
-
         static (string[,], ConsoleColor[,]) Move(ref string[,] field, int x, int y, ref ConsoleColor[,] colorArray, int x1, int y1)
         {
+            int x2 = x, y2 = y; string ball = char.ConvertFromUtf32(9679);
+            while(field[y2,x2] != field[y1, x1])
+            {
+                if(field[y2--,x2] != ball && y2<=10)
+                {
+                    y2--;
+                }
+                else
+                {
+                    if(field[y2,x2--] != ball && x2 <= 10)
+                    {
+                        x2--;
+                        if (field[y2--, x2] != ball && y2 <= 10)
+                        {
+                            y2--;
+                        }
+                        else
+                        {
+                            if (field[y2, x2--] != ball && x2 <= 10)
+                            {
+                                x2--;
+
+                            }
+                            else
+                            {
+                                if (field[y2, x2++] != ball && x2 <= 10)
+                                {
+                                    x2++;
+                                }
+                                else
+                                {
+                                    if (field[y2++, x2] != ball && y2 <= 10)
+                                    {
+                                        y2++;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if(field[y2,x2++] != ball && x2 <= 10)
+                        {
+                            x2++;
+                            if (field[y2--, x2] != ball && y2 <= 10)
+                            {
+                                y2--;
+                            }
+                            else
+                            {
+                                if (field[y2, x2--] != ball && x2 <= 10)
+                                {
+                                    x2--;
+
+                                }
+                                else
+                                {
+                                    if (field[y2, x2++] != ball && x2 <= 10)
+                                    {
+                                        x2++;
+                                    }
+                                    else
+                                    {
+                                        if (field[y2++, x2] != ball && y2 <= 10)
+                                        {
+                                            y2++;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if(field[y2++,x2] != ball && y2 <= 10)
+                            {
+                                y2++;
+                                if (field[y2--, x2] != ball && y2 <= 10)
+                                {
+                                    y2--;
+                                }
+                                else
+                                {
+                                    if (field[y2, x2--] != ball && x2 <= 10)
+                                    {
+                                        x2--;
+
+                                    }
+                                    else
+                                    {
+                                        if (field[y2, x2++] != ball && x2 <= 10)
+                                        {
+                                            x2++;
+                                        }
+                                        else
+                                        {
+                                            if (field[y2++, x2] != ball && y2 <= 10)
+                                            {
+                                                y2++;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
                 field[y, x] = "";
-                field[y1, x1] = Char.ConvertFromUtf32(9679);
+                field[y1, x1] = ball;
                 colorArray[y1, x1] = colorArray[y, x];
                 colorArray[y, x] = ConsoleColor.Black;
                 return (field, colorArray);
@@ -73,10 +171,17 @@ namespace Lines
         }
 
         static void Cout(ref string[,] array, ref ConsoleColor[,] color)
-        {
-            
+        {   Console.Write("   ");
             for(int i = 0; i < 10; i++)
             {
+                Console.ResetColor();
+                Console.Write(" {0} ", i);
+            }
+            Console.WriteLine();
+            for(int i = 0; i < 10; i++)
+            {
+                Console.ResetColor();
+                Console.Write(" {0} ", i);
                 for(int j = 0; j < 10; j++)
                 {
                     if (array[i, j] == Char.ConvertFromUtf32(9679))
@@ -91,63 +196,100 @@ namespace Lines
                     }
                 }
                 Console.WriteLine();
+                
             }
             
         }
 
         static (int, string[,], ConsoleColor[,]) Line(ref string[,] Field, ref ConsoleColor[,] colors, ref int points)
         {
-            for(int i = 0; i < 8; i++)
+           
+            for (int i = 0; i < 10; i++)
             {
-                for(int j = 0; j < 8; j++)
+                for (int j = 0; j < 8; j++)
                 {
-                    if (Field[i,j] == char.ConvertFromUtf32(9679) && Field[i, j] == Field[i, j + 1] && Field[i, j] == Field[i, j + 2] && colors[i, j] == colors[i, j + 1] && colors[i, j] == colors[i, j+2])
+                   if(Field[i,j] == char.ConvertFromUtf32(9679) && colors[i,j] == colors[i, j + 1] && colors[i,j] == colors[i,j+2])
                     {
-                        points += 10;
-                        Field[i, j] = "";
+                        
+                        
+                            Field[i, j] = "";
                         Field[i, j + 1] = "";
                         Field[i, j + 2] = "";
-
                         colors[i, j] = ConsoleColor.Black;
                         colors[i, j + 1] = ConsoleColor.Black;
                         colors[i, j + 2] = ConsoleColor.Black;
+                        points+=10;
+                        
                     }
-
-                    if (Field[i, j] == char.ConvertFromUtf32(9679) && Field[i, j] == Field[i + 1, j] && Field[i, j] == Field[i + 2, j] && colors[i, j] == colors[i + 1, j] && colors[i, j] == colors[i + 2, j])
+                    
+                }
+            }
+            for (int i = 2; i < 10; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    if(Field[i,j] == char.ConvertFromUtf32(9679) && colors[i,j] == colors[i-1,j+1] && colors[i,j] == colors[i - 2, j + 2])
                     {
-                        points += 10;
-                        Field[i, j] = "";
+                        
+                       
+                            Field[i, j] = "";
+                        Field[i -1, j + 1] = "";
+                        Field[i - 2, j + 2] = "";
+                        colors[i , j] = ConsoleColor.Black;
+                        colors[i - 1, j + 1] = ConsoleColor.Black;
+                        colors[i - 2, j + 2] = ConsoleColor.Black;
+                        points+=10;
+                        
+                    }
+                }
+            }
+            for (int i = 2; i < 8; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if(Field[i,j] == char.ConvertFromUtf32(9679) && colors[i,j] == colors[i+1,j] && colors[i,j] == colors[i + 2, j])
+                    {
+                        
+                       
+                       
+                            Field[i, j] = "";
                         Field[i + 1, j] = "";
                         Field[i + 2, j] = "";
-
                         colors[i, j] = ConsoleColor.Black;
                         colors[i + 1, j] = ConsoleColor.Black;
                         colors[i + 2, j] = ConsoleColor.Black;
+                        points+=10;
+                        
                     }
-                    if (Field[i, j] == char.ConvertFromUtf32(9679) && Field[i, j] == Field[i + 1, j + 1] && Field[i, j] == Field[i + 2, j + 2] && colors[i, j] == colors[i + 1, j + 1] && colors[i, j] == colors[i + 2, j + 2])
-                    {
-                        points += 10;
-                        Field[i, j] = "";
-                        Field[i + 1, j + 1] = "";
-                        Field[i + 2, j + 2] = "";
-
-                        colors[i, j] = ConsoleColor.Black;
-                        colors[i + 1, j + 1] = ConsoleColor.Black;
-                        colors[i + 2, j + 2] = ConsoleColor.Black;
-                    }
-
                 }
             }
-            return (points, Field, colors);
+                    return (points, Field, colors);
+        
+            }
+            static void Welcome()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine(
+"\n ╔╗──╔══╗╔╗─╔╗╔═══╗╔══╗" +
+"\n ║║──╚╗╔╝║╚═╝║║╔══╝║╔═╝" +
+"\n ║║───║║─║╔╗─║║╚══╗║╚═╗" +
+"\n ║║───║║─║║╚╗║║╔══╝╚═╗║" +
+"\n ║╚═╗╔╝╚╗║║─║║║╚══╗╔═╝║" +
+"\n ╚══╝╚══╝╚╝─╚╝╚═══╝╚══╝");
+            Console.ResetColor();
+            Console.WriteLine("\n \n Добро пожаловать в игру Lines! " +
+            "Цель игры - набить как можно больше очков, создавая линии от 3х шаров одинакового цвета по вертикали, горизонтали и вертикали. " +
+            "За каждую линию начисляется 10 очков. " +
+            "После каждого хода генерируется столько шариков, сколько вы сейчас введёте");
         }
+
+       
         static void Main(string[] args)
         {
             int x, y, x1, y1, points = 0;
-            
+            Welcome();
             ConsoleColor[,] colorArray = new ConsoleColor[10,10];
             string[,] Field = new string[10,10];
-            
-            //string balls = Char.ConvertFromUtf32(9679);
             Console.WriteLine("Очки: {0}", points);
             Console.Write("Введите кол-во стартовых шаров: ");
             int startBalls = int.Parse(Console.ReadLine());
@@ -181,17 +323,26 @@ namespace Lines
                     x1 = int.Parse(Console.ReadLine());
                     y1 = int.Parse(Console.ReadLine());
                 }
-                    Console.Clear();
-                    Console.WriteLine("Очки: {0}", points);
+                    
                     Move(ref Field, x, y, ref colorArray, x1, y1);
+                    Console.ResetColor();
+
                     Line(ref Field, ref colorArray, ref points);
+                
+                Console.ResetColor();
                     Console.Clear();
-                Console.WriteLine("Очки: {0}", points);
-                Cout(ref Field, ref colorArray);
-                    Console.Clear();
-                Console.WriteLine("Очки: {0}", points);
-                Filling(ref Field, ref startBalls, ref colorArray);
+
+                    Console.WriteLine("Очки: {0}", points);
                     Cout(ref Field, ref colorArray);
+                    Filling(ref Field, ref startBalls, ref colorArray);
+                    Line(ref Field, ref colorArray, ref points);
+                
+                Console.Clear();
+                    Console.ResetColor();
+
+                    Console.WriteLine("Очки: {0}", points);
+                    Cout(ref Field, ref colorArray);
+                    Console.ResetColor();
             }
             Console.ReadKey();
         }
