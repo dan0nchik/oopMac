@@ -178,18 +178,17 @@ namespace Lines
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine(
-"\n ╔╗──╔══╗╔╗─╔╗╔═══╗╔══╗" +
-"\n ║║──╚╗╔╝║╚═╝║║╔══╝║╔═╝" +
-"\n ║║───║║─║╔╗─║║╚══╗║╚═╗" +
-"\n ║║───║║─║║╚╗║║╔══╝╚═╗║" +
-"\n ║╚═╗╔╝╚╗║║─║║║╚══╗╔═╝║" +
-"\n ╚══╝╚══╝╚╝─╚╝╚═══╝╚══╝");
-            Console.ResetColor();
+"\n╔╗╔╗╔╗╔══╗╔═══╗╔╗╔╗╔╗╔══╗╔╗╔╗"+
+"\n║║║║║║║╔╗║║╔═╗║║║║║║║║╔═╝║║║║" +
+"\n║║║║║║║╚╝║║╚═╝║║║║║║╚╝║──║║║║" +
+"\n║║║║║║║╔╗║║╔══╝║║╔║║╔╗║──║║╔║" +
+"\n║╚╝╚╝║║║║║║║───║╚╝║║║║╚═╗║╚╝║" +
+"\n╚════╝╚╝╚╝╚╝───╚══╝╚╝╚══╝╚══╝");        Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.Write("Лучший результат: ");
+            Console.Write("Последний результат: ");
             ReadResults();
             Console.ResetColor();
-            Console.WriteLine("\n \n Добро пожаловать в игру Lines! " +
+            Console.WriteLine("\n \n Добро пожаловать в игру Шарики! " +
             "Цель игры - набить как можно больше очков, создавая линии от 3х шаров одинакового цвета по вертикали, горизонтали и вертикали. " +
             "За каждую линию начисляется 10 очков. " +
             "После каждого хода генерируется столько шариков, сколько вы сейчас введёте");
@@ -197,16 +196,16 @@ namespace Lines
 
         static void WriteResults(int points)
         {
-            
-            var path = "/Users/danielkhromov/ResultLinesFolder/LinesPoints.txt";
 
+            var path = Environment.CurrentDirectory + "/" + "LinesPoints.txt";
             StreamWriter writer = new StreamWriter(path);
             writer.Write(points.ToString());
             writer.Close();
         }
         static void ReadResults()
         {
-            var path = "/Users/danielkhromov/ResultLinesFolder/LinesPoints.txt";
+            //var path = "/Users/danielkhromov/oopMac/Шарики/ResultLinesFolder/LinesPoints.txt";
+            var path = Environment.CurrentDirectory + "/" + "LinesPoints.txt";
             StreamReader reader = new StreamReader(path);
             var input = reader.ReadToEnd();
             reader.Close();
@@ -216,7 +215,6 @@ namespace Lines
         {
             int x, y, x1, y1, points = 0;
             
-            Console.WriteLine(Environment.GetFolderPath(Environment.SpecialFolder.Personal));
             Welcome();
             ConsoleColor[,] colorArray = new ConsoleColor[10,10];
             string[,] Field = new string[10,10];
@@ -226,7 +224,8 @@ namespace Lines
             int startBalls = int.Parse(Console.ReadLine());
             
             Filling(ref Field, ref startBalls, ref colorArray);
-            //Line(ref Field, ref colorArray, ref points);
+            Line(ref Field, ref colorArray, ref points);
+            WriteResults(points);
             Cout(ref Field, ref colorArray);
             Console.ResetColor();
            
