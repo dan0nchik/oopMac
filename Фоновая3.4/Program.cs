@@ -7,7 +7,7 @@ namespace Фоновая3._4
     {
         static int[][] InputArray()
         {
-            Console.Write("Введите количество строк ");
+            Console.Write("Введите количество строк: ");
             int stroka = int.Parse(Console.ReadLine()); int[][] ar;
             ar = new int[stroka][];
             string[] s;
@@ -69,17 +69,57 @@ namespace Фоновая3._4
             }
 
 
-            Console.Write("\n Массив из сумм элементов в столбцах:");
+            Console.Write("\n" + "Массив из сумм элементов в столбцах: ");
             foreach (int i in arOfSum)
                 Console.Write(i + " ");
             
         }
-       
+        static void Minus(int[][] ar)
+        {
+            
+            int k = 0;
+            foreach(int[] i in ar)
+            {
+                for (int j = 0; j < i.Length; j++)
+                {
+                    if (i[j] < 0)
+                    {
+                        k++;
+                    }
+                }
+            }
+            if (k == 0)
+            {
+                throw new Exception("В ГЛАВНОМ МАССИВЕ НЕТ ОТРИЦАТЕЛЬНЫХ ЭЛЕМЕНТОВ!!!");
+            }
+            if(k == 1)
+            {
+                throw new Exception("в массиве только 1 элемент");
+            }
+            int[] arr = new int[k];
+            k = 0;
+            foreach(int[] i in ar)
+            {
+                for (int j = 0; j < i.Length; j++)
+                {
+                    if (i[j] < 0)
+                    {
+                        arr[k] = i[j];
+                        k++;
+                    }
+                }
+            }
+            Array.Sort(arr);
+            Console.WriteLine();
+            foreach (int i in arr)
+                Console.Write("{0} ", i);
+        }
         static void Main(string[] args)
         {
             int[][] ar = InputArray();
             Cout(ar);
             SummaVStolbcach(ar);
+            Minus(ar);
         }
     }
 }
