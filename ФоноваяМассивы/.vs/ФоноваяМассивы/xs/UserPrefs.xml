@@ -2,14 +2,14 @@
   <MonoDevelop.Ide.ItemProperties.ФоноваяМассивы PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="129" Column="29" />
+      <File FileName="Program.cs" Line="155" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
-    <Watch file="../../../Program.cs" line="82" offsetX="-1" offsetY="-1" expression="array2" liveUpdate="False" />
-    <Watch file="../../../Program.cs" line="82" offsetX="-1" offsetY="-1" expression="array2" liveUpdate="False" />
-    <Watch file="../../../Program.cs" line="82" offsetX="-1" offsetY="-1" expression="j" liveUpdate="False" />
-    <Watch file="../../../Program.cs" line="82" offsetX="-1" offsetY="-1" expression="j" liveUpdate="False" />
+    <Watch file="../../../Program.cs" line="82" column="0" endLine="0" endColumn="0" offsetX="-1" offsetY="-1" expression="array2" liveUpdate="False" />
+    <Watch file="../../../Program.cs" line="82" column="0" endLine="0" endColumn="0" offsetX="-1" offsetY="-1" expression="array2" liveUpdate="False" />
+    <Watch file="../../../Program.cs" line="82" column="0" endLine="0" endColumn="0" offsetX="-1" offsetY="-1" expression="j" liveUpdate="False" />
+    <Watch file="../../../Program.cs" line="82" column="0" endLine="0" endColumn="0" offsetX="-1" offsetY="-1" expression="j" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

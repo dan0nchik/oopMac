@@ -5,10 +5,9 @@ namespace Фоновая3._4
     class Program
 
     {
-        static int[][] InputArray()
+        static int[][] InputArray(int stroka)
         {
-            Console.Write("Введите количество строк: ");
-            int stroka = int.Parse(Console.ReadLine()); int[][] ar;
+            int[][] ar;
             ar = new int[stroka][];
             string[] s;
             for(int i = 0; i < ar.Length; i++)
@@ -116,10 +115,14 @@ namespace Фоновая3._4
         }
         static void Main(string[] args)
         {
-            int[][] ar = InputArray();
+            Console.Write("Введите количество строк: ");
+            int stroki = int.Parse(Console.ReadLine());
+            int[][] ar = InputArray(stroki);
             Cout(ar);
             SummaVStolbcach(ar);
             Minus(ar);
+
+           
         }
     }
 }

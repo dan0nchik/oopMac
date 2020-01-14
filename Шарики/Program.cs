@@ -104,7 +104,7 @@ namespace Lines
                    if(Field[i,j] == char.ConvertFromUtf32(9679) && colors[i,j] == colors[i, j + 1] && colors[i,j] == colors[i,j + 2])
                     {
 
-                        color = colors[i, j];
+                        
                         Field[i, j] = "";
                         Field[i, j + 1] = "";
                         Field[i, j + 2] = "";
@@ -114,13 +114,7 @@ namespace Lines
                         points+=10;
                         i += 2;
                         j += 2;
-                        while(colors[i,j] == color)
-                        {
-                            i++;
-                            j++;
-                            colors[i, j] = ConsoleColor.Black;
-                            Field[i, j] = "";
-                        }
+                        
                     }
                 }
             }
@@ -131,7 +125,7 @@ namespace Lines
                     if(Field[i,j] == char.ConvertFromUtf32(9679) && colors[i,j] == colors[i - 1,j+1] && colors[i,j] == colors[i - 2, j + 2])
                     {
 
-                        color = colors[i, j];
+                      
                         Field[i, j] = "";
                         Field[i - 1, j + 1] = "";
                         Field[i - 2, j + 2] = "";
@@ -141,13 +135,7 @@ namespace Lines
                         points+=10;
                         i -= 2;
                         j += 2;
-                        while (colors[i, j] == color)
-                        {
-                            i--;
-                            j++;
-                            colors[i, j] = ConsoleColor.Black;
-                            Field[i, j] = "";
-                        }
+                        
                     }
                 }
             }
@@ -158,7 +146,7 @@ namespace Lines
                     if (Field[i, j] == char.ConvertFromUtf32(9679) && colors[i, j] == colors[i - 1, j +-1] && colors[i, j] == colors[i - 2, j - 2])
                     {
 
-                        color = colors[i, j];
+                        
                         Field[i, j] = "";
                         Field[i - 1, j - 1] = "";
                         Field[i - 2, j - 2] = "";
@@ -168,13 +156,7 @@ namespace Lines
                         points += 10;
                         i -= 2;
                         j -= 2;
-                        while (colors[i, j] == color)
-                        {
-                            i--;
-                            j--;
-                            colors[i, j] = ConsoleColor.Black;
-                            Field[i, j] = "";
-                        }
+                        
                     }
                 }
             }
@@ -186,7 +168,7 @@ namespace Lines
                     {
 
 
-                        color = colors[i, j];
+                       
                         Field[i, j] = "";
                         Field[i + 1, j] = "";
                         Field[i + 2, j] = "";
@@ -196,13 +178,7 @@ namespace Lines
                         points+=10;
                         i += 2;
                         
-                        while (colors[i, j] == color)
-                        {
-                            i++;
-                           
-                            colors[i, j] = ConsoleColor.Black;
-                            Field[i, j] = "";
-                        }
+                        
                     }
                 }
             }
@@ -212,7 +188,7 @@ namespace Lines
                 {
                     if (Field[i, j] == char.ConvertFromUtf32(9679) && colors[i, j] == colors[i + 1, j + 1] && colors[i, j] == colors[i + 2, j + 2])
                     {
-                        color = colors[i, j];
+                        
                         Field[i, j] = "";
                         Field[i + 1, j + 1] = "";
                         Field[i + 2, j + 2] = "";
@@ -222,13 +198,7 @@ namespace Lines
                         points += 10;
                         i += 2;
                         j += 2;
-                        while (colors[i, j] == color)
-                        {
-                            i++;
-                            j++;
-                            colors[i, j] = ConsoleColor.Black;
-                            Field[i, j] = "";
-                        }
+                       
                     }
                 }
             }
