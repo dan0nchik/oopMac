@@ -1,12 +1,12 @@
-﻿<Properties StartupConfiguration="{C84432DA-C50A-495D-8DC3-04A81A7F41D8}|Default">
+﻿<Properties StartupConfiguration="{A7C375FC-9E59-4B1C-84F4-9AB986F0D134}|Default">
+  <MonoDevelop.Ide.ItemProperties.Фоновая3.4 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="215" Column="46" />
+      <File FileName="Program.cs" Line="77" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Шарики PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

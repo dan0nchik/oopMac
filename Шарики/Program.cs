@@ -96,15 +96,15 @@ namespace Lines
 
         static (int, string[,], ConsoleColor[,]) Line(ref string[,] Field, ref ConsoleColor[,] colors, ref int points)
         {
-            
+            ConsoleColor color;
             for (int i = 0; i < 10; i++) //горизонталь
             {
                 for (int j = 0; j < 8; j++)
                 {
                    if(Field[i,j] == char.ConvertFromUtf32(9679) && colors[i,j] == colors[i, j + 1] && colors[i,j] == colors[i,j + 2])
                     {
-                        
-                        
+
+                        color = colors[i, j];
                         Field[i, j] = "";
                         Field[i, j + 1] = "";
                         Field[i, j + 2] = "";
@@ -112,7 +112,15 @@ namespace Lines
                         colors[i, j + 1] = ConsoleColor.Black;
                         colors[i, j + 2] = ConsoleColor.Black;
                         points+=10;
-                        
+                        i += 2;
+                        j += 2;
+                        while(colors[i,j] == color)
+                        {
+                            i++;
+                            j++;
+                            colors[i, j] = ConsoleColor.Black;
+                            Field[i, j] = "";
+                        }
                     }
                 }
             }
@@ -122,16 +130,51 @@ namespace Lines
                 {
                     if(Field[i,j] == char.ConvertFromUtf32(9679) && colors[i,j] == colors[i - 1,j+1] && colors[i,j] == colors[i - 2, j + 2])
                     {
-                        
-                       
+
+                        color = colors[i, j];
                         Field[i, j] = "";
-                        Field[i -1, j + 1] = "";
+                        Field[i - 1, j + 1] = "";
                         Field[i - 2, j + 2] = "";
                         colors[i , j] = ConsoleColor.Black;
                         colors[i - 1, j + 1] = ConsoleColor.Black;
                         colors[i - 2, j + 2] = ConsoleColor.Black;
                         points+=10;
-                        
+                        i -= 2;
+                        j += 2;
+                        while (colors[i, j] == color)
+                        {
+                            i--;
+                            j++;
+                            colors[i, j] = ConsoleColor.Black;
+                            Field[i, j] = "";
+                        }
+                    }
+                }
+            }
+            for (int i = 2; i < 10; i++) //диагональ вверх
+            {
+                for (int j = 2; j < 10; j++)
+                {
+                    if (Field[i, j] == char.ConvertFromUtf32(9679) && colors[i, j] == colors[i - 1, j +-1] && colors[i, j] == colors[i - 2, j - 2])
+                    {
+
+                        color = colors[i, j];
+                        Field[i, j] = "";
+                        Field[i - 1, j - 1] = "";
+                        Field[i - 2, j - 2] = "";
+                        colors[i, j] = ConsoleColor.Black;
+                        colors[i - 1, j - 1] = ConsoleColor.Black;
+                        colors[i - 2, j - 2] = ConsoleColor.Black;
+                        points += 10;
+                        i -= 2;
+                        j -= 2;
+                        while (colors[i, j] == color)
+                        {
+                            i--;
+                            j--;
+                            colors[i, j] = ConsoleColor.Black;
+                            Field[i, j] = "";
+                        }
                     }
                 }
             }
@@ -141,17 +184,25 @@ namespace Lines
                 {
                     if(Field[i,j] == char.ConvertFromUtf32(9679) && colors[i,j] == colors[i + 1,j] && colors[i,j] == colors[i + 2, j])
                     {
-                        
-                       
-                       
-                            Field[i, j] = "";
+
+
+                        color = colors[i, j];
+                        Field[i, j] = "";
                         Field[i + 1, j] = "";
                         Field[i + 2, j] = "";
                         colors[i, j] = ConsoleColor.Black;
                         colors[i + 1, j] = ConsoleColor.Black;
                         colors[i + 2, j] = ConsoleColor.Black;
                         points+=10;
+                        i += 2;
                         
+                        while (colors[i, j] == color)
+                        {
+                            i++;
+                           
+                            colors[i, j] = ConsoleColor.Black;
+                            Field[i, j] = "";
+                        }
                     }
                 }
             }
@@ -161,6 +212,7 @@ namespace Lines
                 {
                     if (Field[i, j] == char.ConvertFromUtf32(9679) && colors[i, j] == colors[i + 1, j + 1] && colors[i, j] == colors[i + 2, j + 2])
                     {
+                        color = colors[i, j];
                         Field[i, j] = "";
                         Field[i + 1, j + 1] = "";
                         Field[i + 2, j + 2] = "";
@@ -168,6 +220,15 @@ namespace Lines
                         colors[i + 1, j + 1] = ConsoleColor.Black;
                         colors[i + 2, j + 2] = ConsoleColor.Black;
                         points += 10;
+                        i += 2;
+                        j += 2;
+                        while (colors[i, j] == color)
+                        {
+                            i++;
+                            j++;
+                            colors[i, j] = ConsoleColor.Black;
+                            Field[i, j] = "";
+                        }
                     }
                 }
             }
