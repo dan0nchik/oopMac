@@ -143,7 +143,7 @@ namespace Lines
             {
                 for (int j = 2; j < 10; j++)
                 {
-                    if (Field[i, j] == char.ConvertFromUtf32(9679) && colors[i, j] == colors[i - 1, j +-1] && colors[i, j] == colors[i - 2, j - 2])
+                    if (Field[i, j] == char.ConvertFromUtf32(9679) && colors[i, j] == colors[i - 1, j - 1] && colors[i, j] == colors[i - 2, j - 2])
                     {
 
                         
