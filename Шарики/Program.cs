@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.IO;
 namespace Lines
 {
     class Program
     {
-        
+
         static bool GameOver(ref string [,] field , ref int points)
         {
 
@@ -23,13 +23,13 @@ namespace Lines
                 return false;
             }
             return true;
-            
+
         }
 
-        
+
         static (string[,], ConsoleColor[,]) Filling(ref string[,] field, ref int n, ref ConsoleColor[,] color)
         {
-            
+
             Random rand = new Random();
             int x = rand.Next(0, 10);
             int y = rand.Next(0, 10);
@@ -48,7 +48,7 @@ namespace Lines
         static (string[,], ConsoleColor[,]) Move(ref string[,] field, int x, int y, ref ConsoleColor[,] colorArray, int x1, int y1)
         {
             string ball = char.ConvertFromUtf32(9679);
-            
+
                 field[y, x] = "";
                 field[y1, x1] = ball;
                 colorArray[y1, x1] = colorArray[y, x];
@@ -89,14 +89,14 @@ namespace Lines
                     }
                 }
                 Console.WriteLine();
-                
+
             }
-            
+
         }
 
         static (int, string[,], ConsoleColor[,]) Line(ref string[,] Field, ref ConsoleColor[,] colors, ref int points)
         {
-            ConsoleColor color;
+            
             for (int i = 0; i < 10; i++) //горизонталь
             {
                 for (int j = 0; j < 8; j++)
@@ -104,7 +104,7 @@ namespace Lines
                    if(Field[i,j] == char.ConvertFromUtf32(9679) && colors[i,j] == colors[i, j + 1] && colors[i,j] == colors[i,j + 2])
                     {
 
-                        
+
                         Field[i, j] = "";
                         Field[i, j + 1] = "";
                         Field[i, j + 2] = "";
@@ -114,7 +114,7 @@ namespace Lines
                         points+=10;
                         i += 2;
                         j += 2;
-                        
+
                     }
                 }
             }
@@ -125,7 +125,7 @@ namespace Lines
                     if(Field[i,j] == char.ConvertFromUtf32(9679) && colors[i,j] == colors[i - 1,j+1] && colors[i,j] == colors[i - 2, j + 2])
                     {
 
-                      
+
                         Field[i, j] = "";
                         Field[i - 1, j + 1] = "";
                         Field[i - 2, j + 2] = "";
@@ -135,7 +135,7 @@ namespace Lines
                         points+=10;
                         i -= 2;
                         j += 2;
-                        
+
                     }
                 }
             }
@@ -146,7 +146,7 @@ namespace Lines
                     if (Field[i, j] == char.ConvertFromUtf32(9679) && colors[i, j] == colors[i - 1, j +-1] && colors[i, j] == colors[i - 2, j - 2])
                     {
 
-                        
+
                         Field[i, j] = "";
                         Field[i - 1, j - 1] = "";
                         Field[i - 2, j - 2] = "";
@@ -156,7 +156,7 @@ namespace Lines
                         points += 10;
                         i -= 2;
                         j -= 2;
-                        
+
                     }
                 }
             }
@@ -168,7 +168,7 @@ namespace Lines
                     {
 
 
-                       
+
                         Field[i, j] = "";
                         Field[i + 1, j] = "";
                         Field[i + 2, j] = "";
@@ -177,8 +177,8 @@ namespace Lines
                         colors[i + 2, j] = ConsoleColor.Black;
                         points+=10;
                         i += 2;
-                        
-                        
+
+
                     }
                 }
             }
@@ -188,7 +188,7 @@ namespace Lines
                 {
                     if (Field[i, j] == char.ConvertFromUtf32(9679) && colors[i, j] == colors[i + 1, j + 1] && colors[i, j] == colors[i + 2, j + 2])
                     {
-                        
+
                         Field[i, j] = "";
                         Field[i + 1, j + 1] = "";
                         Field[i + 2, j + 2] = "";
@@ -198,12 +198,12 @@ namespace Lines
                         points += 10;
                         i += 2;
                         j += 2;
-                       
+
                     }
                 }
             }
                     return (points, Field, colors);
-        
+
             }
             static void Welcome()
         {
@@ -245,24 +245,24 @@ namespace Lines
         static void Main(string[] args)
         {
             int x, y, x1, y1, points = 0;
-            
+
             Welcome();
             ConsoleColor[,] colorArray = new ConsoleColor[10,10];
             string[,] Field = new string[10,10];
             Console.WriteLine("Очки: {0}", points);
-            
+
             Console.Write("Введите кол-во стартовых шаров: ");
             int startBalls = int.Parse(Console.ReadLine());
-            
+
             Filling(ref Field, ref startBalls, ref colorArray);
             Line(ref Field, ref colorArray, ref points);
             WriteResults(points);
             Cout(ref Field, ref colorArray);
             Console.ResetColor();
-           
+
             while (GameOver(ref Field, ref points) == true)
             {
-                    
+
                     Console.Write("Введите координаты шара (X;Y):");
                     x = int.Parse(Console.ReadLine());
                     y = int.Parse(Console.ReadLine());
@@ -272,19 +272,19 @@ namespace Lines
 
                     while(Field[y,x] != char.ConvertFromUtf32(9679))
                 {
-                    
+
                     Console.Write("\r Координаты шара введены неверно! Повторите ввод (X;Y): ");
                     x = int.Parse(Console.ReadLine());
                     y = int.Parse(Console.ReadLine());
                 }
                 while (Field[y1, x1] == char.ConvertFromUtf32(9679))
                 {
-                    
+
                     Console.Write("\r Координаты места введены неверно! Повторите ввод (X;Y):");
                     x1 = int.Parse(Console.ReadLine());
                     y1 = int.Parse(Console.ReadLine());
                 }
-                    
+
                     Move(ref Field, x, y, ref colorArray, x1, y1);
                     Console.ResetColor();
 

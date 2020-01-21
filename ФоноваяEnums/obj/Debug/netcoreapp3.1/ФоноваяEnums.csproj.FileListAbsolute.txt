@@ -1,0 +1,11 @@
+/Users/danielkhromov/oopMac/ФоноваяEnums/bin/Debug/netcoreapp3.1/ФоноваяEnums
+/Users/danielkhromov/oopMac/ФоноваяEnums/bin/Debug/netcoreapp3.1/ФоноваяEnums.deps.json
+/Users/danielkhromov/oopMac/ФоноваяEnums/bin/Debug/netcoreapp3.1/ФоноваяEnums.runtimeconfig.json
+/Users/danielkhromov/oopMac/ФоноваяEnums/bin/Debug/netcoreapp3.1/ФоноваяEnums.runtimeconfig.dev.json
+/Users/danielkhromov/oopMac/ФоноваяEnums/bin/Debug/netcoreapp3.1/ФоноваяEnums.dll
+/Users/danielkhromov/oopMac/ФоноваяEnums/bin/Debug/netcoreapp3.1/ФоноваяEnums.pdb
+/Users/danielkhromov/oopMac/ФоноваяEnums/obj/Debug/netcoreapp3.1/ФоноваяEnums.csprojAssemblyReference.cache
+/Users/danielkhromov/oopMac/ФоноваяEnums/obj/Debug/netcoreapp3.1/ФоноваяEnums.AssemblyInfoInputs.cache
+/Users/danielkhromov/oopMac/ФоноваяEnums/obj/Debug/netcoreapp3.1/ФоноваяEnums.AssemblyInfo.cs
+/Users/danielkhromov/oopMac/ФоноваяEnums/obj/Debug/netcoreapp3.1/ФоноваяEnums.dll
+/Users/danielkhromov/oopMac/ФоноваяEnums/obj/Debug/netcoreapp3.1/ФоноваяEnums.pdb
