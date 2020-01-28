@@ -1,0 +1,11 @@
+/Users/danielkhromov/oopMac/ПрактикаСтруктуры/bin/Debug/netcoreapp3.1/ПрактикаСтруктуры
+/Users/danielkhromov/oopMac/ПрактикаСтруктуры/bin/Debug/netcoreapp3.1/ПрактикаСтруктуры.deps.json
+/Users/danielkhromov/oopMac/ПрактикаСтруктуры/bin/Debug/netcoreapp3.1/ПрактикаСтруктуры.runtimeconfig.json
+/Users/danielkhromov/oopMac/ПрактикаСтруктуры/bin/Debug/netcoreapp3.1/ПрактикаСтруктуры.runtimeconfig.dev.json
+/Users/danielkhromov/oopMac/ПрактикаСтруктуры/bin/Debug/netcoreapp3.1/ПрактикаСтруктуры.dll
+/Users/danielkhromov/oopMac/ПрактикаСтруктуры/bin/Debug/netcoreapp3.1/ПрактикаСтруктуры.pdb
+/Users/danielkhromov/oopMac/ПрактикаСтруктуры/obj/Debug/netcoreapp3.1/ПрактикаСтруктуры.csprojAssemblyReference.cache
+/Users/danielkhromov/oopMac/ПрактикаСтруктуры/obj/Debug/netcoreapp3.1/ПрактикаСтруктуры.AssemblyInfoInputs.cache
+/Users/danielkhromov/oopMac/ПрактикаСтруктуры/obj/Debug/netcoreapp3.1/ПрактикаСтруктуры.AssemblyInfo.cs
+/Users/danielkhromov/oopMac/ПрактикаСтруктуры/obj/Debug/netcoreapp3.1/ПрактикаСтруктуры.dll
+/Users/danielkhromov/oopMac/ПрактикаСтруктуры/obj/Debug/netcoreapp3.1/ПрактикаСтруктуры.pdb

@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ПрактикаСтруктуры", "ПрактикаСтруктуры.csproj", "{09E924B4-9A23-41FA-82CD-5841A1BFFEA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09E924B4-9A23-41FA-82CD-5841A1BFFEA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09E924B4-9A23-41FA-82CD-5841A1BFFEA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09E924B4-9A23-41FA-82CD-5841A1BFFEA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09E924B4-9A23-41FA-82CD-5841A1BFFEA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
