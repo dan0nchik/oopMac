@@ -11,42 +11,56 @@ namespace ПрактикаСтруктуры
     }
     class Program
     {
-        static void FillingData(ref TVacansy data)
+        static TVacansy[] FillingData(ref TVacansy[] arOfData, string enter)
         {
-            
-            data.Prof = "Программист";
-            data.Company = "Google";
-            data.Agency = "Rabota.ru";
-            data.Wage = 100000;
+
+            arOfData[0].Prof = "Программист";
+            arOfData[0].Company = "Google";
+            arOfData[0].Agency = "Rabota.ru";
+            arOfData[0].Wage = 150000;
+
+            arOfData[1].Prof = "Дизайнер";
+            arOfData[1].Company = "Apple";
+            arOfData[1].Agency = "Headhunter.com";
+            arOfData[1].Wage = 100000;
+
+            if(enter == "Да")
+            {
+                //заполнение юзером
+            }
+
         }
         static void Cout(TVacansy data)
         {
-            Console.WriteLine("Профессия: {0}", data.Prof);
-            Console.WriteLine("Компания работодатель: {0}", data.Company);
-            Console.WriteLine("Кадровое агенство: {0}", data.Agency);
-            Console.WriteLine("Заработная плата: {0}", data.Wage);
+            TVacansy[] dataArray = new TVacansy[3];
+
         }
         static void InputCheck(TVacansy data, int wishWage, string wishedAgency)
         {
-            
+
             if (wishWage <= data.Wage && wishedAgency == data.Agency)
-                Console.WriteLine( "Резюме отправлено!");
+                Console.WriteLine("Резюме отправлено!");
             if (wishWage > data.Wage)
-                       Console.WriteLine( "Зарплата слишком низкая");
-            if(wishedAgency != data.Agency)
+                Console.WriteLine("Зарплата слишком низкая");
+            if (wishedAgency != data.Agency)
                 Console.WriteLine("Вакансия из другого агентства");
         }
         static void Main(string[] args)
         {
-            TVacansy data = new TVacansy();
+            TVacansy[] arOfData = new TVacansy[5];
+
+            string enter = "";
+            Console.Write("Хотите сами заполнить данные (до 3 вакансий!) напишите Да или Нет: ");
+            enter = Console.ReadLine();
+            FillingData(ref arOfData, enter);
             Console.Write("Введите желаемую зарплату: ");
             int wishWage = int.Parse(Console.ReadLine());
             Console.Write("Введите кадровое агенство: ");
             string wishedAgency = Console.ReadLine();
-            FillingData(ref data);
+            
             InputCheck(data, wishWage, wishedAgency);
             Cout(data);
-            
+
         }
     }
 }
