@@ -24,43 +24,60 @@ namespace ПрактикаСтруктуры
             arOfData[1].Agency = "Headhunter.com";
             arOfData[1].Wage = 100000;
 
-            if(enter == "Да")
+            if(enter.Contains("Да"))
             {
-                //заполнение юзером
+                Console.Write("Введите число вакансий, которые вы хотите отправить в базу самостоятельно: ");
+                int numOfVacancies = int.Parse(Console.ReadLine());
+                for (int i = 2; i <= numOfVacancies; i++)
+                {
+                    Console.Write("\n"+"Введите {0} профессию из {1}:",i,numOfVacancies);
+                    arOfData[i].Prof = Console.ReadLine();
+                    Console.Write("\n" + "Введите {0} компанию из {1}:", i, numOfVacancies);
+                    arOfData[i].Company = Console.ReadLine();
+                    Console.Write("\n" + "Введите {0} агенство из {1}:", i, numOfVacancies);
+                    arOfData[i].Agency = Console.ReadLine();
+                    Console.Write("\n" + "Введите {0} зарплату из {1}:", i, numOfVacancies);
+                    arOfData[i].Wage = int.Parse(Console.ReadLine());
+                }
             }
-
+            return arOfData;
         }
-        static void Cout(TVacansy data)
+        static void Cout(ref TVacansy[] arOfData, int indexOfVacancy)
         {
-            TVacansy[] dataArray = new TVacansy[3];
-
+            Console.WriteLine($"Профессия: «{arOfData[indexOfVacancy].Prof}»");
+            Console.WriteLine($"Компания работодатель: «{arOfData[indexOfVacancy].Company}»");
+            Console.WriteLine($"Кадровое агенство: «{arOfData[indexOfVacancy].Agency}»");
+            Console.WriteLine($"Заработная плата:  {arOfData[indexOfVacancy].Wage} руб.");
         }
-        static void InputCheck(TVacansy data, int wishWage, string wishedAgency)
+        static void InputCheck(ref TVacansy[] arOfData, int wishWage, string wishedAgency)
         {
-
-            if (wishWage <= data.Wage && wishedAgency == data.Agency)
-                Console.WriteLine("Резюме отправлено!");
-            if (wishWage > data.Wage)
-                Console.WriteLine("Зарплата слишком низкая");
-            if (wishedAgency != data.Agency)
-                Console.WriteLine("Вакансия из другого агентства");
+            bool foundAgency = false, wageIsHigh = false;
+            for(int i = 0; i < arOfData.Length; i++)
+            {
+                if (wishWage <= arOfData[i].Wage && wishedAgency == arOfData[i].Agency)
+                {
+                    Console.WriteLine("Успешно! Резюме отправлено в эту компанию:");
+                    Cout(ref arOfData, i);
+                    foundAgency = true;
+                    wageIsHigh = false;
+                }
+            }
+            if (foundAgency == false) Console.WriteLine("Вакансия из другого агентства");
+            if(wageIsHigh == true) Console.WriteLine("Зарплата слишком низкая"); 
         }
         static void Main(string[] args)
         {
             TVacansy[] arOfData = new TVacansy[5];
-
-            string enter = "";
-            Console.Write("Хотите сами заполнить данные (до 3 вакансий!) напишите Да или Нет: ");
+            int numOfVacancies;
+            string enter;
+            Console.Write("Хотите сами заполнить данные (от 1 до 3 вакансий!)? напишите Да или Нет: ");
             enter = Console.ReadLine();
             FillingData(ref arOfData, enter);
             Console.Write("Введите желаемую зарплату: ");
             int wishWage = int.Parse(Console.ReadLine());
             Console.Write("Введите кадровое агенство: ");
             string wishedAgency = Console.ReadLine();
-            
-            InputCheck(data, wishWage, wishedAgency);
-            Cout(data);
-
+            InputCheck(ref arOfData, wishWage, wishedAgency);
         }
     }
 }
