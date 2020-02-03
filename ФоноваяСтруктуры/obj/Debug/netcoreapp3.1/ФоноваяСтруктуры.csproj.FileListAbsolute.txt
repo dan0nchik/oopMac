@@ -1,0 +1,11 @@
+/Users/danielkhromov/oopMac/ФоноваяСтруктуры/bin/Debug/netcoreapp3.1/ФоноваяСтруктуры
+/Users/danielkhromov/oopMac/ФоноваяСтруктуры/bin/Debug/netcoreapp3.1/ФоноваяСтруктуры.deps.json
+/Users/danielkhromov/oopMac/ФоноваяСтруктуры/bin/Debug/netcoreapp3.1/ФоноваяСтруктуры.runtimeconfig.json
+/Users/danielkhromov/oopMac/ФоноваяСтруктуры/bin/Debug/netcoreapp3.1/ФоноваяСтруктуры.runtimeconfig.dev.json
+/Users/danielkhromov/oopMac/ФоноваяСтруктуры/bin/Debug/netcoreapp3.1/ФоноваяСтруктуры.dll
+/Users/danielkhromov/oopMac/ФоноваяСтруктуры/bin/Debug/netcoreapp3.1/ФоноваяСтруктуры.pdb
+/Users/danielkhromov/oopMac/ФоноваяСтруктуры/obj/Debug/netcoreapp3.1/ФоноваяСтруктуры.csprojAssemblyReference.cache
+/Users/danielkhromov/oopMac/ФоноваяСтруктуры/obj/Debug/netcoreapp3.1/ФоноваяСтруктуры.AssemblyInfoInputs.cache
+/Users/danielkhromov/oopMac/ФоноваяСтруктуры/obj/Debug/netcoreapp3.1/ФоноваяСтруктуры.AssemblyInfo.cs
+/Users/danielkhromov/oopMac/ФоноваяСтруктуры/obj/Debug/netcoreapp3.1/ФоноваяСтруктуры.dll
+/Users/danielkhromov/oopMac/ФоноваяСтруктуры/obj/Debug/netcoreapp3.1/ФоноваяСтруктуры.pdb
