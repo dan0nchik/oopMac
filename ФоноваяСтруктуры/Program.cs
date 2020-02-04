@@ -88,8 +88,6 @@ namespace ФоноваяСтруктуры
                 Console.ResetColor();
                 return (liceists,index);
             }
-
-
             int line = 1;
             for (int i = 0; i < index; i++)
             {
@@ -148,6 +146,7 @@ namespace ФоноваяСтруктуры
             double group = double.Parse(Console.ReadLine());
             Console.Write("Введите номер группы, В которую вы хотите перевести учеников: ");
             double transferGroup = double.Parse(Console.ReadLine());
+
             while (liceists[i].Surname != null)
             {
                 if (liceists[i].GroupNumber.Equals(group))
@@ -161,12 +160,15 @@ namespace ФоноваяСтруктуры
         }
         static int Spravka(Liceist[] liceists)
         {
+            Console.Write("Введите фамилию ученика: ");
+            string surname = Console.ReadLine();
+            while(liceists[i].Surname != null)
 
             return 0;
         }
         static void Main(string[] args)
         {
-            Liceist[] liceists = new Liceist[20];
+            Liceist[] liceists = new Liceist[10000];
             Console.WriteLine(liceists[10]);
             int input = 1;
             string[] subjects = new string[5] { "математике", "русскому", "английскому", "физике", "программированию" };
