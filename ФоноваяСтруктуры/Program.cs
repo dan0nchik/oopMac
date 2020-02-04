@@ -155,7 +155,7 @@ namespace ФоноваяСтруктуры
             Console.Clear();
             return liceists;
         }
-        static int Spravka(Liceist[] liceists)
+        static int Info(Liceist[] liceists)
         {
             Console.Write("Введите фамилию ученика: ");
             string surname = Console.ReadLine();
@@ -190,7 +190,7 @@ namespace ФоноваяСтруктуры
                 if (input == 3) AllInChosenGroup(liceists);
                 if (input == 4) MarksForSubject(liceists);
                 if (input == 5) Transfer(ref liceists);
-                if (input == 6) Spravka(liceists);
+                if (input == 6) Info(liceists);
             }
         }
     }
