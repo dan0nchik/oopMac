@@ -10,16 +10,10 @@ namespace ФоноваяСтруктуры
     public struct Liceist
     {
         public string Surname;
+        public string State;
         public double GroupNumber;
         public double[] Marks;
-        public void Output()
-        {
-
-            Console.WriteLine(Surname);
-            Console.WriteLine(GroupNumber);
-            foreach (int i in Marks)
-                Console.WriteLine(i);
-        }
+        
     }
     class Program
     {
@@ -34,6 +28,8 @@ namespace ФоноваяСтруктуры
                 liceists[i].Surname = Console.ReadLine();
                 Console.Write("Введите номер группы: ");
                 liceists[i].GroupNumber = double.Parse(Console.ReadLine());
+                Console.Write("Введите направление: ");
+                liceists[i].State = Console.ReadLine();
                 liceists[i].Marks = new double[5];
                 for (int j = 0; j < 5; j++)
                 {
@@ -94,6 +90,8 @@ namespace ФоноваяСтруктуры
                 liceists[i].Surname = lines[line];
                 line++;
                 liceists[i].GroupNumber = double.Parse(lines[line]);
+                line++;
+                liceists[i].State = Console.ReadLine();
                 line++;
                 liceists[i].Marks = new double[5];
                 for (int j = 0; j < 5; j++)
@@ -162,7 +160,16 @@ namespace ФоноваяСтруктуры
         {
             Console.Write("Введите фамилию ученика: ");
             string surname = Console.ReadLine();
-            while(liceists[i].Surname != null)
+            Console.Write("Введите группу: ");
+            double group = double.Parse(Console.ReadLine());
+            Console.Write("Введите направление - программирование - 1, арм - 2, экономика - 3: ");
+            int state = int.Parse(Console.ReadLine());
+
+            int i = 0;
+            while (liceists[i].Surname != null)
+            {
+                if(surname == )
+            }
 
             return 0;
         }

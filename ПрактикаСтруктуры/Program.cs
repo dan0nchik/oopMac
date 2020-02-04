@@ -25,19 +25,19 @@ namespace ПрактикаСтруктуры
             arOfData[1].Wage = 100000;
 
             int counter = 1;
-            if(enter.Contains("да"))
+            if(enter.Contains("Да") == true)
             {
                 Console.Write("Введите число вакансий, которые вы хотите отправить в базу самостоятельно: ");
                 int numOfVacancies = int.Parse(Console.ReadLine());
-                for (int i = 2; i <= numOfVacancies; i++)
+                for (int i = 2; i <= numOfVacancies+1; i++)
                 {
-                    Console.Write("Введите {0} профессию из {1}:",counter,numOfVacancies);
+                    Console.Write("Введите {0} профессию из {1}: ",counter,numOfVacancies);
                     arOfData[i].Prof = Console.ReadLine();
-                    Console.Write("Введите {0} компанию из {1}:", counter, numOfVacancies);
+                    Console.Write("Введите {0} компанию из {1}: ", counter, numOfVacancies);
                     arOfData[i].Company = Console.ReadLine();
-                    Console.Write("Введите {0} агенство из {1}:", counter, numOfVacancies);
+                    Console.Write("Введите {0} агенство из {1}: ", counter, numOfVacancies);
                     arOfData[i].Agency = Console.ReadLine();
-                    Console.Write("Введите {0} зарплату из {1}:", counter, numOfVacancies);
+                    Console.Write("Введите {0} зарплату из {1}: ", counter, numOfVacancies);
                     arOfData[i].Wage = int.Parse(Console.ReadLine());
                     counter++;
                 }
@@ -72,7 +72,7 @@ namespace ПрактикаСтруктуры
             TVacansy[] arOfData = new TVacansy[5];
             
             string enter;
-            Console.Write("Хотите сами заполнить данные (от 1 до 3 вакансий!)? напишите да или нет: ");
+            Console.Write("Хотите сами заполнить данные (от 1 до 3 вакансий!)? напишите Да или Нет: ");
             enter = Console.ReadLine();
             FillingData(ref arOfData, enter);
             Console.Write("Введите желаемую зарплату: ");
