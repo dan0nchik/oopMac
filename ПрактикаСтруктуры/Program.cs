@@ -70,7 +70,6 @@ namespace ПрактикаСтруктуры
         static void Main(string[] args)
         {
             TVacansy[] arOfData = new TVacansy[5];
-            
             string enter;
             Console.Write("Хотите сами заполнить данные (от 1 до 3 вакансий!)? напишите Да или Нет: ");
             enter = Console.ReadLine();

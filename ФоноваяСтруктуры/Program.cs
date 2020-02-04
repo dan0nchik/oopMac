@@ -13,7 +13,7 @@ namespace ФоноваяСтруктуры
         public string State;
         public double GroupNumber;
         public double[] Marks;
-        
+
     }
     class Program
     {
@@ -72,18 +72,17 @@ namespace ФоноваяСтруктуры
         }
         static (Liceist[], int) ReadFromFile(ref Liceist[] liceists)
         {
-
-            var path = Environment.CurrentDirectory + "/" + "DataFromFile.txt"; //путь
-            string[] lines = File.ReadAllLines(path); //массив из строк
-            int index = int.Parse(lines[0]); // количество учеников
-
+            int index = 0;
             if (new FileInfo("DataFromFile.txt").Length == 0)
-            {//проверка файла на пустоту
+            {   //проверка файла на пустоту
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Файл пустой - заполните файл или введите данные в консоль!");
                 Console.ResetColor();
                 return (liceists,index);
             }
+            var path = Environment.CurrentDirectory + "/" + "DataFromFile.txt"; //путь
+            string[] lines = File.ReadAllLines(path); //массив из строк
+            index = int.Parse(lines[0]); // количество учеников
             int line = 1;
             for (int i = 0; i < index; i++)
             {
@@ -91,7 +90,7 @@ namespace ФоноваяСтруктуры
                 line++;
                 liceists[i].GroupNumber = double.Parse(lines[line]);
                 line++;
-                liceists[i].State = Console.ReadLine();
+                liceists[i].State = lines[line];
                 line++;
                 liceists[i].Marks = new double[5];
                 for (int j = 0; j < 5; j++)
@@ -162,25 +161,26 @@ namespace ФоноваяСтруктуры
             string surname = Console.ReadLine();
             Console.Write("Введите группу: ");
             double group = double.Parse(Console.ReadLine());
-            Console.Write("Введите направление - программирование - 1, арм - 2, экономика - 3: ");
-            int state = int.Parse(Console.ReadLine());
-
-            int i = 0;
-            while (liceists[i].Surname != null)
-            {
-                if(surname == )
-            }
-
+            Console.Write("Введите направление - программирование, арм или экономика: ");
+            string state = Console.ReadLine();
+            Console.Write("Введите год (например, 2005): ");
+            int year = int.Parse(Console.ReadLine());
+            Console.WriteLine(@$"
+                Справка
+Дана {surname} в том, что он(а) действительно
+обучается в ГБОУ Лицей 1533 в {group} классе.
+Дата окончания обучения 30 июня 20{year%100}. Направление - {state}");
+            Thread.Sleep(10000);
+            Console.Clear();
             return 0;
         }
         static void Main(string[] args)
         {
-            Liceist[] liceists = new Liceist[10000];
-            Console.WriteLine(liceists[10]);
+            Liceist[] liceists = new Liceist[1000];
+            
             int input = 1;
             string[] subjects = new string[5] { "математике", "русскому", "английскому", "физике", "программированию" };
             int liceistsFromFile = ReadFromFile(ref liceists).Item2;
-
             while (input != 0)
             {
                 Interface();
