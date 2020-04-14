@@ -1,0 +1,46 @@
+NavigationView
+            {
+        
+        VStack
+            {
+                
+                
+             Spacer()
+                LateButton()
+            Spacer()
+                HurryImage()
+                }
+            
+        .navigationBarTitle("LateLit")
+        .navigationBarItems(trailing: NavigationLink(destination: SignIn(), label: {
+            AccountImage()
+        }))
+        }
+
+
+
+
+
+
+
+
+Text("Вы успешно вошли :)")
+                        .font(.largeTitle)
+                        .bold()
+                    Image("nice")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    
+                    Button(action: {
+                        let fireBaseAuth = Auth.auth()
+                        self.signed.Sign = false
+                        do{
+                            try fireBaseAuth.signOut()
+                        }
+                        catch let signOutError as NSError{
+                            print(signOutError)
+                        }
+                    }){
+                        Text("Выйти")
+                    }
+                    Spacer()
