@@ -4,18 +4,18 @@ namespace Практика_14
     public class DemoPoint
     {
 
-        public int x, y;
-        public DemoPoint()
+        protected int x, y;
+        protected DemoPoint()
         {
             x = 0;
             y = 0;
         }
-        public DemoPoint(int x, int y)
+        protected DemoPoint(int x, int y)
         {
             this.x = x;
             this.y = y;
         }
-        public void show()
+        protected void show()
         {
             Console.WriteLine($"Координата точки: ({x};{y})");
         }
@@ -23,7 +23,7 @@ namespace Практика_14
 
     public class DemoLine : DemoPoint
     {
-        public int x1, y1;
+        private int x1, y1;
         public DemoLine() : base()
         {
             x1 = 0;
