@@ -56,7 +56,6 @@ namespace Фоновая5
             b = 7;
             beta = 50;
         }
-        //to radians
         private double ToRadians() => (Math.PI / 180) * beta;
 
         public bool IsTriangle => a == b || b == GetC || a == GetC ? true : false;
