@@ -1,4 +1,4 @@
-﻿using System;
+
 
 namespace Фоновая4вар
 {
