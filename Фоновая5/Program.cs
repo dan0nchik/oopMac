@@ -5,6 +5,7 @@ namespace Фоновая5
     class Figura
     {
         protected int x, y;
+
         protected Figura()
         {
             x = 0;
@@ -16,13 +17,17 @@ namespace Фоновая5
             this.y = y;
         }
         protected int GetX => x;
+
         protected int GetY => y;
+
         protected void Show() => Console.WriteLine($"X: {x} \n Y: {y}");
     }
 
     class Triangle : Figura
     {
-        private int a, b, beta, x, y;
+        private int a, b, beta;
+        private new int x, y;
+
         public Triangle(int a, int b, int beta, int x, int y) : base(x, y)
         {
             try
@@ -42,7 +47,8 @@ namespace Фоновая5
             }
             catch (Exception e) { Console.WriteLine(e.Message); }
         }
-        public Triangle():base()
+
+        public Triangle() : base()
         {
             x = GetX;
             y = GetY;
@@ -50,25 +56,53 @@ namespace Фоновая5
             b = 7;
             beta = 50;
         }
+        //to radians
         private double ToRadians() => (Math.PI / 180) * beta;
-        
+
         public bool IsTriangle => a == b || b == GetC || a == GetC ? true : false;
-        public double Area() => Math.Round(a * b * Math.Sin(ToRadians())/2,2);
+
+        public double Area() => Math.Round(a * b * Math.Sin(ToRadians()) / 2, 2);
+
         public int GetA => a;
+
         public int GetB => b;
-        public double GetC => Math.Round(Math.Sqrt(Math.Pow(a,2) + Math.Pow(b,2) - 2 * a * b * Math.Cos(ToRadians())),2);
+
+        public int SetA
+        {
+            set
+            {
+                if (value < 0) throw new Exception("Сторона А < 0!");
+                else a = value;
+            }
+        }
+
+        public int SetB
+        {
+            set
+            {
+                if (value < 0) throw new Exception("Сторона B < 0!");
+                else b = value;
+            }
+        }
+
+        public double GetC => Math.Round(Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2) - 2 * a * b * Math.Cos(ToRadians())), 2);
+
+
         public new void Show() => Console.WriteLine($" X: {x} \n Y: {y} \n a: {a} \n b: {b} \n c: {GetC} \n" +
             $" Угол: {beta} \n Площадь: {Area()} \n Р/бедренный?: {IsTriangle}");
     }
 
     class Rectangle : Figura
     {
-        private int width, height, x, y;
+        private int width, height;
+        private new int x, y;
+
         public Rectangle(int width, int height, int x, int y) : base(x, y)
         {
             try
             {
-                if (width > 0 && height > 0) {
+                if (width > 0 && height > 0)
+                {
                     this.width = width;
                     this.height = height;
                     this.x = x;
@@ -81,17 +115,41 @@ namespace Фоновая5
             }
             catch (Exception e) { Console.WriteLine(e.Message); }
         }
-        public Rectangle():base()
+
+        public Rectangle() : base()
         {
             x = GetX;
             y = GetY;
             width = 4;
             height = 8;
         }
-        public bool IsSquare => width == height ? true:false;
+
+        public bool IsSquare => width == height ? true : false;
+
         public int Area() => width * height;
+
         public int GetHeight => height;
+
         public int GetWidth => width;
+
+        public int SetW
+        {
+            set
+            {
+                if (value < 0) throw new Exception("Ширина < 0!");
+                else width = value;
+            }
+        }
+
+        public int SetH
+        {
+            set
+            {
+                if (value < 0) throw new Exception("Высота < 0!");
+                else width = value;
+            }
+        }
+
         public new void Show() => Console.WriteLine($" X: {x}\n Y: {y}\n Высота: {height}" +
             $" \n Ширина: {width} \n Площадь: {Area()} \n Квадрат?: {IsSquare}");
     }
@@ -106,7 +164,7 @@ namespace Фоновая5
             figure = int.Parse(Console.ReadLine());
             Console.WriteLine("Режим: ваши данные - 1, по умолчанию - 2");
             mode = int.Parse(Console.ReadLine());
-            if(figure == 1)
+            if (figure == 1)
             {
                 if (mode == 1)
                 {
@@ -123,9 +181,9 @@ namespace Фоновая5
                     tri = new Triangle(a: a, b: b, beta: beta, x: x, y: y);
                 }
                 else
-            {
-                tri = new Triangle();
-            }
+                {
+                    tri = new Triangle();
+                }
                 tri.Show();
             }
             if (figure == 2)
@@ -148,7 +206,7 @@ namespace Фоновая5
                 }
                 rec.Show();
             }
-            
+
         }
     }
 }
